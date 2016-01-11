@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<ion-view title="Map">
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button ng-click="locate();" class="button button-icon icon ion-pinpoint"></button>
+  </ion-nav-buttons>
+
+  <ion-content data-tap-disabled="true">  
+  
+
+    <ion-tabs id="actionTabs" class="tabs-positive tabs-icon-left">
+  	  
+  	  <ion-tab title="def" ng-click="selectTab(1)">
+  	  	  
+  	  </ion-tab>
+  	  
+  	  <ion-tab title="rel" ng-click="selectTab(2)">
+		  
+		  
+	  </ion-tab>
+  	  
+	  <ion-tab title="tag" ng-click="selectTab(3)">
+		  
+	  </ion-tab>  
+	  
+	  <ion-tab title="mark" ng-click="selectTab(4)">
+		  	  
+	  </ion-tab>
+ 	  <ion-tab title="clusterM" ng-click="selectTab(5)">
+	 	  		<div><h1>cluster tag</h1></div>
+ 	  </ion-tab>
+ 	  <ion-tab title="clusterT" ng-click="selectTab(6)"> 
+ 	  			<div><h1>cluster marker</h1></div>
+ 	  </ion-tab>
+  </ion-tabs>
+  
+   <ion-content>
+            <leaflet layer="map.layer" center="map.center" markers="map.markers" ng-if="map"></leaflet>
+  </ion-content>
+  
+  
+  <!-- <ion-content>
+  <h3>Popup text</h3>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary" ng-class="{ active: markers.m1.focus == true }">
+                            <input type="radio" name="focus" ng-click="markers.m1.focus=true;" />Focus
+                        </label>
+                        <label class="btn btn-primary" ng-class="{ active: markers.m1.focus == false }">
+                            <input type="radio" name="focus" ng-click="markers.m1.focus=false;" />Not focus
+                        </label>
+                    </div>
+  </ion-content>
+   -->
+   
+   
+</ion-content>   
+</ion-view>
+
+</body>
+</html>
